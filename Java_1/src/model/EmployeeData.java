@@ -25,5 +25,13 @@ public class EmployeeData {
         this.Data = Data;
     }
     
+    public Employee addNewEmployee(){
+        
+        Employee newEmployee = new Employee();
+        Data.add(newEmployee);
+        return newEmployee;
+        
+        
+    }
     
 }

@@ -16,8 +16,8 @@
   <Layout>
     <DimensionLayout dim="0">
       <Group type="103" groupAlignment="0" attributes="0">
-          <Component id="lblTitle" alignment="1" max="32767" attributes="0"/>
-          <Group type="102" alignment="0" attributes="0">
+          <Component id="lblTitle" max="32767" attributes="0"/>
+          <Group type="102" attributes="0">
               <EmptySpace min="-2" pref="58" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="1" attributes="0">
                   <Component id="lblID" min="-2" pref="60" max="-2" attributes="0"/>
@@ -33,18 +33,30 @@
               </Group>
               <EmptySpace type="separate" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Component id="txtID" min="-2" pref="140" max="-2" attributes="0"/>
-                  <Component id="txtName" min="-2" pref="140" max="-2" attributes="0"/>
-                  <Component id="txtAge" alignment="0" min="-2" pref="140" max="-2" attributes="0"/>
-                  <Component id="txtGender" alignment="0" min="-2" pref="140" max="-2" attributes="0"/>
-                  <Component id="txtStartDate" alignment="0" min="-2" pref="140" max="-2" attributes="0"/>
-                  <Component id="txtLevel" alignment="0" min="-2" pref="140" max="-2" attributes="0"/>
-                  <Component id="txtTeamInfo" alignment="0" min="-2" pref="140" max="-2" attributes="0"/>
-                  <Component id="txtPositionTitle" alignment="0" min="-2" pref="140" max="-2" attributes="0"/>
-                  <Component id="txtPhoneNo" alignment="0" min="-2" pref="140" max="-2" attributes="0"/>
-                  <Component id="txtEmailID" min="-2" pref="140" max="-2" attributes="0"/>
+                  <Group type="102" attributes="0">
+                      <Component id="txtTeamInfo" min="-2" pref="140" max="-2" attributes="0"/>
+                      <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                  </Group>
+                  <Group type="102" attributes="0">
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Component id="txtID" min="-2" pref="140" max="-2" attributes="0"/>
+                          <Component id="txtName" min="-2" pref="140" max="-2" attributes="0"/>
+                          <Component id="txtAge" alignment="0" min="-2" pref="140" max="-2" attributes="0"/>
+                          <Component id="txtGender" alignment="0" min="-2" pref="140" max="-2" attributes="0"/>
+                          <Component id="txtStartDate" alignment="0" min="-2" pref="140" max="-2" attributes="0"/>
+                          <Component id="txtLevel" alignment="0" min="-2" pref="140" max="-2" attributes="0"/>
+                          <Component id="txtPositionTitle" alignment="0" min="-2" pref="140" max="-2" attributes="0"/>
+                          <Component id="txtPhoneNo" alignment="0" min="-2" pref="140" max="-2" attributes="0"/>
+                          <Component id="txtEmailID" min="-2" pref="140" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace pref="192" max="32767" attributes="0"/>
+                  </Group>
               </Group>
-              <EmptySpace pref="192" max="32767" attributes="0"/>
+          </Group>
+          <Group type="102" alignment="1" attributes="0">
+              <EmptySpace max="32767" attributes="0"/>
+              <Component id="btnSubmit" min="-2" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="228" max="-2" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -88,7 +100,7 @@
                   <Component id="lblTeamInfo" alignment="3" min="-2" pref="29" max="-2" attributes="0"/>
                   <Component id="txtTeamInfo" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
-              <EmptySpace type="separate" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="27" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
                   <Component id="lblPositionTitle" alignment="3" min="-2" pref="29" max="-2" attributes="0"/>
                   <Component id="txtPositionTitle" alignment="3" min="-2" max="-2" attributes="0"/>
@@ -103,7 +115,9 @@
                   <Component id="lblemailID" alignment="3" min="-2" pref="29" max="-2" attributes="0"/>
                   <Component id="txtEmailID" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
-              <EmptySpace pref="86" max="32767" attributes="0"/>
+              <EmptySpace type="separate" max="-2" attributes="0"/>
+              <Component id="btnSubmit" min="-2" pref="33" max="-2" attributes="0"/>
+              <EmptySpace pref="26" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -226,6 +240,14 @@
     <Component class="javax.swing.JTextField" name="txtEmailID">
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtEmailIDActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JButton" name="btnSubmit">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Submit"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnSubmitActionPerformed"/>
       </Events>
     </Component>
   </SubComponents>

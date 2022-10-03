@@ -142,6 +142,11 @@ public class AddJPanel extends javax.swing.JPanel {
         jScrollPane1.setViewportView(tblEmployee);
 
         btnUpdate.setText("Update");
+        btnUpdate.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnUpdateActionPerformed(evt);
+            }
+        });
 
         btnDelete.setText("Delete");
         btnDelete.addActionListener(new java.awt.event.ActionListener() {
@@ -452,8 +457,46 @@ public class AddJPanel extends javax.swing.JPanel {
         
     }//GEN-LAST:event_btnViewActionPerformed
 
+    private void btnUpdateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnUpdateActionPerformed
+        // TODO add your handling code here:
+        
+        DefaultTableModel model =(DefaultTableModel) tblEmployee.getModel();
+      if(tblEmployee.getSelectedRowCount()==1){
+         
+     
+        String name = txtName1.getText();
+        String EmployeeID = txtID2.getText();
+        String Age = txtAge1.getText();
+        String Gender= txtGender1.getText();
+        String StartDate = txtStartDate1.getText();
+        String Level= txtLevel1.getText();
+        String TeamInfo = txtTeamInfo1.getText();
+        String PositionTitle= txtPositionTitle1.getText();
+        String CellNo= txtPhoneNo1.getText();
+        String Email= txtEmailID1.getText();
+        
+       
+        model.setValueAt(name,tblEmployee.getSelectedRow(),0);
+        model.setValueAt(EmployeeID,tblEmployee.getSelectedRow(),1);
+        model.setValueAt(Age,tblEmployee.getSelectedRow(),2);
+        model.setValueAt(Gender,tblEmployee.getSelectedRow(),3);
+        model.setValueAt(StartDate,tblEmployee.getSelectedRow(),4);
+        model.setValueAt(Level,tblEmployee.getSelectedRow(),5);
+        
+        model.setValueAt(TeamInfo,tblEmployee.getSelectedRow(),6);
+        model.setValueAt(PositionTitle,tblEmployee.getSelectedRow(),7);
+        model.setValueAt(CellNo,tblEmployee.getSelectedRow(),8);
+        model.setValueAt(Email,tblEmployee.getSelectedRow(),9);
+       
+       
+        JOptionPane.showMessageDialog(this,"Employee Details Updated Successfully.");
+        populateTable();
+        
+        
+    }//GEN-LAST:event_btnUpdateActionPerformed
+
                  
-    
+    }  
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnDelete;

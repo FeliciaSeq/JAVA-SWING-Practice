@@ -72,7 +72,6 @@ public class CreateJPanel extends javax.swing.JPanel {
         lblVStartDate = new javax.swing.JLabel();
         lblVLevel = new javax.swing.JLabel();
         lblVTeamInfo = new javax.swing.JLabel();
-        lblVPositionTitle = new javax.swing.JLabel();
         lblVPhoneNo = new javax.swing.JLabel();
         lblVEmailID = new javax.swing.JLabel();
 
@@ -157,10 +156,20 @@ public class CreateJPanel extends javax.swing.JPanel {
                 txtGenderActionPerformed(evt);
             }
         });
+        txtGender.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                txtGenderKeyReleased(evt);
+            }
+        });
 
         txtStartDate.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtStartDateActionPerformed(evt);
+            }
+        });
+        txtStartDate.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                txtStartDateKeyReleased(evt);
             }
         });
 
@@ -169,10 +178,20 @@ public class CreateJPanel extends javax.swing.JPanel {
                 txtLevelActionPerformed(evt);
             }
         });
+        txtLevel.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                txtLevelKeyReleased(evt);
+            }
+        });
 
         txtTeamInfo.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtTeamInfoActionPerformed(evt);
+            }
+        });
+        txtTeamInfo.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                txtTeamInfoKeyReleased(evt);
             }
         });
 
@@ -185,6 +204,11 @@ public class CreateJPanel extends javax.swing.JPanel {
         txtPhoneNo.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtPhoneNoActionPerformed(evt);
+            }
+        });
+        txtPhoneNo.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                txtPhoneNoKeyReleased(evt);
             }
         });
 
@@ -231,32 +255,22 @@ public class CreateJPanel extends javax.swing.JPanel {
         lblVGender.setBackground(new java.awt.Color(255, 0, 51));
         lblVGender.setFont(new java.awt.Font("Helvetica Neue", 0, 8)); // NOI18N
         lblVGender.setForeground(new java.awt.Color(255, 0, 0));
-        lblVGender.setText("jLabel1");
 
         lblVStartDate.setBackground(new java.awt.Color(255, 0, 51));
         lblVStartDate.setFont(new java.awt.Font("Helvetica Neue", 0, 8)); // NOI18N
         lblVStartDate.setForeground(new java.awt.Color(255, 0, 0));
-        lblVStartDate.setText("jLabel1");
 
         lblVLevel.setBackground(new java.awt.Color(255, 0, 51));
         lblVLevel.setFont(new java.awt.Font("Helvetica Neue", 0, 8)); // NOI18N
         lblVLevel.setForeground(new java.awt.Color(255, 0, 0));
-        lblVLevel.setText("jLabel1");
 
         lblVTeamInfo.setBackground(new java.awt.Color(255, 0, 51));
         lblVTeamInfo.setFont(new java.awt.Font("Helvetica Neue", 0, 8)); // NOI18N
         lblVTeamInfo.setForeground(new java.awt.Color(255, 0, 0));
-        lblVTeamInfo.setText("jLabel1");
-
-        lblVPositionTitle.setBackground(new java.awt.Color(255, 0, 51));
-        lblVPositionTitle.setFont(new java.awt.Font("Helvetica Neue", 0, 8)); // NOI18N
-        lblVPositionTitle.setForeground(new java.awt.Color(255, 0, 0));
-        lblVPositionTitle.setText("jLabel1");
 
         lblVPhoneNo.setBackground(new java.awt.Color(255, 0, 51));
         lblVPhoneNo.setFont(new java.awt.Font("Helvetica Neue", 0, 8)); // NOI18N
         lblVPhoneNo.setForeground(new java.awt.Color(255, 0, 0));
-        lblVPhoneNo.setText("jLabel1");
 
         lblVEmailID.setBackground(new java.awt.Color(255, 0, 51));
         lblVEmailID.setFont(new java.awt.Font("Helvetica Neue", 0, 8)); // NOI18N
@@ -308,10 +322,7 @@ public class CreateJPanel extends javax.swing.JPanel {
                                         .addComponent(txtLevel, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addGap(18, 18, 18)
                                         .addComponent(lblVLevel))
-                                    .addGroup(layout.createSequentialGroup()
-                                        .addComponent(txtPositionTitle, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addGap(18, 18, 18)
-                                        .addComponent(lblVPositionTitle))
+                                    .addComponent(txtPositionTitle, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addGroup(layout.createSequentialGroup()
                                         .addComponent(txtPhoneNo, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addGap(18, 18, 18)
@@ -392,8 +403,7 @@ public class CreateJPanel extends javax.swing.JPanel {
                         .addGap(55, 55, 55)))
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(lblPositionTitle, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(txtPositionTitle, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(lblVPositionTitle, javax.swing.GroupLayout.PREFERRED_SIZE, 21, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(txtPositionTitle, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(lblPhoneNumber, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -557,10 +567,10 @@ public class CreateJPanel extends javax.swing.JPanel {
         Pattern pat = Pattern.compile(pattern);
         Matcher match = pat.matcher(txtAge.getText());
         if(!match.matches()){
-            lblAge.setText("Age is incorrect. Please enter only numbers.");
+            lblVAge.setText("Age is incorrect. Please enter only numbers.");
         }
         else{
-            lblAge.setText(null);
+            lblVAge.setText(null);
         }
     }//GEN-LAST:event_txtAgeKeyReleased
 
@@ -578,6 +588,78 @@ public class CreateJPanel extends javax.swing.JPanel {
         
         
     }//GEN-LAST:event_txtEmailIDKeyReleased
+
+    private void txtGenderKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtGenderKeyReleased
+        // TODO add your handling code here:
+        String pattern = "^[a-zA-Z]{0,30}$";
+        Pattern pat = Pattern.compile(pattern);
+        Matcher match = pat.matcher(txtGender.getText());
+        if(!match.matches()){
+            lblVGender.setText("Gender is incorrect. Please enter only characters.");
+        }
+        else{
+            lblVGender.setText(null);
+        }
+        
+        
+    }//GEN-LAST:event_txtGenderKeyReleased
+
+    private void txtStartDateKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtStartDateKeyReleased
+        // TODO add your handling code here:
+         String pattern = "^[0-9 /]{0,10}$";
+        Pattern pat = Pattern.compile(pattern);
+        Matcher match = pat.matcher(txtStartDate.getText());
+        if(!match.matches()){
+            lblVStartDate.setText("Date is incorrect. Please enter valid Date.");
+        }
+        else{
+            lblVStartDate.setText(null);
+        }
+    }//GEN-LAST:event_txtStartDateKeyReleased
+
+    private void txtLevelKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtLevelKeyReleased
+        // TODO add your handling code here:
+        String pattern = "^[a-zA-Z0-9]{0,30}[@][a-zA-Z0-9]{0,10}[.][a-zA-Z]{0,5}$";
+        Pattern pat = Pattern.compile(pattern);
+        Matcher match = pat.matcher(txtLevel.getText());
+        if(!match.matches()){
+            lblVLevel.setText("Level is incorrect. Please enter valid email Level.");
+        }
+        else{
+            lblVLevel.setText(null);
+        }
+        
+        
+    }//GEN-LAST:event_txtLevelKeyReleased
+
+    private void txtTeamInfoKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtTeamInfoKeyReleased
+        // TODO add your handling code here:
+        String pattern = "^[a-zA-Z0-9]{0,30}[@][a-zA-Z0-9]{0,10}[.][a-zA-Z]{0,5}$";
+        Pattern pat = Pattern.compile(pattern);
+        Matcher match = pat.matcher(txtTeamInfo.getText());
+        if(!match.matches()){
+            lblVTeamInfo.setText("Team Info is incorrect. Please enter valid Info.");
+        }
+        else{
+            lblVTeamInfo.setText(null);
+        }
+        
+    }//GEN-LAST:event_txtTeamInfoKeyReleased
+
+    private void txtPhoneNoKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtPhoneNoKeyReleased
+        // TODO add your handling code here:
+        String pattern = "^[0-9]{0,30}$";
+        Pattern pat = Pattern.compile(pattern);
+        Matcher match = pat.matcher(txtPhoneNo.getText());
+        if(!match.matches()){
+            lblVPhoneNo.setText("Number is incorrect. Please enter only numbers.");
+        }
+        else{
+            lblVPhoneNo.setText(null);
+        }
+        
+        
+    }//GEN-LAST:event_txtPhoneNoKeyReleased
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
@@ -601,7 +683,6 @@ public class CreateJPanel extends javax.swing.JPanel {
     private javax.swing.JLabel lblVID1;
     private javax.swing.JLabel lblVLevel;
     private javax.swing.JLabel lblVPhoneNo;
-    private javax.swing.JLabel lblVPositionTitle;
     private javax.swing.JLabel lblVStartDate;
     private javax.swing.JLabel lblVTeamInfo;
     private javax.swing.JLabel lblVname;

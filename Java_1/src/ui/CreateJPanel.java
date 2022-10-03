@@ -223,12 +223,10 @@ public class CreateJPanel extends javax.swing.JPanel {
         lblVID.setBackground(new java.awt.Color(255, 0, 51));
         lblVID.setFont(new java.awt.Font("Helvetica Neue", 0, 8)); // NOI18N
         lblVID.setForeground(new java.awt.Color(255, 0, 0));
-        lblVID.setText("jLabel1");
 
         lblVAge.setBackground(new java.awt.Color(255, 0, 51));
         lblVAge.setFont(new java.awt.Font("Helvetica Neue", 0, 8)); // NOI18N
         lblVAge.setForeground(new java.awt.Color(255, 0, 0));
-        lblVAge.setText("jLabel1");
 
         lblVGender.setBackground(new java.awt.Color(255, 0, 51));
         lblVGender.setFont(new java.awt.Font("Helvetica Neue", 0, 8)); // NOI18N
@@ -263,7 +261,6 @@ public class CreateJPanel extends javax.swing.JPanel {
         lblVEmailID.setBackground(new java.awt.Color(255, 0, 51));
         lblVEmailID.setFont(new java.awt.Font("Helvetica Neue", 0, 8)); // NOI18N
         lblVEmailID.setForeground(new java.awt.Color(255, 0, 0));
-        lblVEmailID.setText("jLabel1");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);

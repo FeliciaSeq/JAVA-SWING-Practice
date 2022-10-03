@@ -4,6 +4,7 @@
  */
 package ui;
 
+import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
 import model.Employee;
 import model.EmployeeData;
@@ -142,6 +143,11 @@ public class AddJPanel extends javax.swing.JPanel {
         btnUpdate.setText("Update");
 
         btnDelete.setText("Delete");
+        btnDelete.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnDeleteActionPerformed(evt);
+            }
+        });
 
         txtName1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -267,7 +273,6 @@ public class AddJPanel extends javax.swing.JPanel {
                             .addComponent(txtID2, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(txtAge1, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(txtGender1, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                             .addGroup(layout.createSequentialGroup()
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
@@ -379,6 +384,35 @@ public class AddJPanel extends javax.swing.JPanel {
         // TODO add your handling code here:
     }//GEN-LAST:event_txtPhoneNo1ActionPerformed
 
+    
+    
+    
+    
+    
+    
+    private void btnDeleteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDeleteActionPerformed
+         // TODO add your handling code here:
+         int selectedRowIndex = tblEmployee.getSelectedRow();
+         if (selectedRowIndex<0){
+             
+             JOptionPane.showMessageDialog(this,"Select a row to delete.");
+             return;
+         
+         }
+         
+             DefaultTableModel model = (DefaultTableModel) tblEmployee.getModel();
+             Employee selectedEmployee = (Employee) model.getValueAt(selectedRowIndex,0);
+             
+             Data.deleteEmployee(selectedEmployee);
+             
+             JOptionPane.showMessageDialog(this,"Employee detail deleted.");
+             populateTable();
+    
+
+    }//GEN-LAST:event_btnDeleteActionPerformed
+
+                 
+    
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnDelete;
@@ -437,7 +471,7 @@ public class AddJPanel extends javax.swing.JPanel {
         for(Employee em : Data .getData()){
             
             Object [] row = new Object[10];
-            row[0] = em.getName();
+            row[0] = em;
             row[1] = em.getEmployeeID();
             row[2] = em.getAge();
             row[3] = em.getGender();

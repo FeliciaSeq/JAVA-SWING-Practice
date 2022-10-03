@@ -34,4 +34,8 @@ public class EmployeeData {
         
     }
     
+    public void deleteEmployee(Employee em){
+    Data.remove(em);
+    }
+    
 }

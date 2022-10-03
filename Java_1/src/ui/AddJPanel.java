@@ -84,6 +84,7 @@ public class AddJPanel extends javax.swing.JPanel {
         txtPositionTitle1 = new javax.swing.JTextField();
         lblPositionTitle1 = new javax.swing.JLabel();
         txtPhoneNo1 = new javax.swing.JTextField();
+        btnView = new javax.swing.JButton();
 
         lblPhoneNumber.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         lblPhoneNumber.setText("Phone No:");
@@ -239,6 +240,13 @@ public class AddJPanel extends javax.swing.JPanel {
             }
         });
 
+        btnView.setText("View");
+        btnView.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnViewActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
@@ -255,6 +263,8 @@ public class AddJPanel extends javax.swing.JPanel {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addComponent(btnView)
+                        .addGap(18, 18, 18)
                         .addComponent(btnUpdate)
                         .addGap(18, 18, 18)
                         .addComponent(btnDelete)
@@ -305,7 +315,8 @@ public class AddJPanel extends javax.swing.JPanel {
                 .addGap(43, 43, 43)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnUpdate)
-                    .addComponent(btnDelete))
+                    .addComponent(btnDelete)
+                    .addComponent(btnView))
                 .addGap(62, 62, 62)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(lblName1, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -411,12 +422,43 @@ public class AddJPanel extends javax.swing.JPanel {
 
     }//GEN-LAST:event_btnDeleteActionPerformed
 
+    private void btnViewActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnViewActionPerformed
+        // TODO add your handling code here:
+        
+        int selectedRowIndex = tblEmployee.getSelectedRow();
+         if (selectedRowIndex<0){
+             
+             JOptionPane.showMessageDialog(this,"Select a row to View.");
+             return;
+         
+         }
+         
+             DefaultTableModel model = (DefaultTableModel) tblEmployee.getModel();
+             Employee selectedEmployee = (Employee) model.getValueAt(selectedRowIndex,0);
+             
+             txtName1.setText(selectedEmployee.getName());
+             txtID2.setText(selectedEmployee.getEmployeeID());
+             txtAge1.setText(selectedEmployee.getAge());
+             txtGender1.setText(selectedEmployee.getGender());
+             txtStartDate1.setText(selectedEmployee.getStartDate());
+             txtLevel1.setText(selectedEmployee.getLevel());
+             txtTeamInfo1.setText(selectedEmployee.getTeamInfo());
+             txtPositionTitle1.setText(selectedEmployee.getPositionTitle());
+             txtPhoneNo1.setText(selectedEmployee.getCellNo());
+             txtEmailID1.setText(selectedEmployee.getEmail());
+             
+        
+        
+        
+    }//GEN-LAST:event_btnViewActionPerformed
+
                  
     
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnDelete;
     private javax.swing.JButton btnUpdate;
+    private javax.swing.JButton btnView;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JLabel lblAge;
     private javax.swing.JLabel lblAge1;

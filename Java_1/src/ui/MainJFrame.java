@@ -43,7 +43,7 @@ public class MainJFrame extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        ControlPanel.setBackground(new java.awt.Color(255, 153, 153));
+        ControlPanel.setBackground(new java.awt.Color(204, 204, 255));
 
         btnAdd.setText("Add");
         btnAdd.addActionListener(new java.awt.event.ActionListener() {
@@ -82,7 +82,7 @@ public class MainJFrame extends javax.swing.JFrame {
 
         SplitPanel.setLeftComponent(ControlPanel);
 
-        WorkArea.setBackground(new java.awt.Color(255, 204, 204));
+        WorkArea.setBackground(new java.awt.Color(204, 204, 255));
 
         javax.swing.GroupLayout WorkAreaLayout = new javax.swing.GroupLayout(WorkArea);
         WorkArea.setLayout(WorkAreaLayout);

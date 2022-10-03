@@ -19,6 +19,7 @@ public class Employee {
     private String PositionTitle;
     private String CellNo;
     private String Email;
+    private String Photo;
 
     public String getName() {
         return name;
@@ -104,5 +105,15 @@ public class Employee {
     public String toString(){
         return name;
     }
+
+    public String getPhoto() {
+        return Photo;
+    }
+
+    public void setPhoto(String Photo) {
+        this.Photo = Photo;
+    }
+    
+    
 
 }
